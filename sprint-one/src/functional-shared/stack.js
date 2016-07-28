@@ -14,7 +14,7 @@ var extend = function(to, from) {
   }
 };
 
-stackMethods = {};
+var stackMethods = {};
 
 stackMethods.push = function(value) {
   this.storage[this.length++] = value;
@@ -27,3 +27,4 @@ stackMethods.size = function() {
 stackMethods.pop = function() {
   return this.length > 0 ? this.storage[--this.length] : null;
 };
+
