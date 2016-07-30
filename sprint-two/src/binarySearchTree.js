@@ -18,7 +18,7 @@ BinarySearchTree.prototype.insert = function(value) {
         node.right = childNode;
       }
     }
-  }).call(null, this); //null is unneeded context
+  })(this); //null is unneeded context
 };
 
 BinarySearchTree.prototype.contains = function(value) {
@@ -33,7 +33,7 @@ BinarySearchTree.prototype.contains = function(value) {
       return checkContains(node.left);
     }
     return checkContains(node.right);
-  }).call(null, this);
+  })(this);
 };
 
 BinarySearchTree.prototype.depthFirstLog = function(cb) {
@@ -44,7 +44,7 @@ BinarySearchTree.prototype.depthFirstLog = function(cb) {
     cb(node.value);
     depthFirstAWESOME(node.left);
     depthFirstAWESOME(node.right);
-  }).call(null, this);
+  })(this);
 };
 
 
