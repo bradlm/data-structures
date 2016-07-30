@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="sprint-one/srcCombined.js"></script>
+  </head>
+  <body>
+    <script>
+    var limit = 10000;
+    var functionalArray = [];
+    for (var i = 0; i < limit; i++) {
+      functionalArray.push(FunctionalStack());
+    }
+    var functionalSharedArray = [];
+    for (var i = 0; i < limit; i++) {
+      functionalSharedArray.push(FunctionalSharedStack());
+    }
+    var prototypalArray = [];
+    for (var i = 0; i < limit; i++) {
+      prototypalArray.push(PrototypalStack());
+    }
+    var psuedoclassicalArray = [];
+    for (var i = 0; i < limit; i++) {
+      psuedoclassicalArray.push(new PseudoclassicalStack());
+    }
+    var functionalQueue = [];
+    for (var i = 0; i < limit; i++) {
+      functionalQueue.push(FunctionalQueue());
+    }
+    var functionalSharedQueue = [];
+    for (var i = 0; i < limit; i++) {
+      functionalSharedQueue.push(FunctionalSharedQueue());
+    }
+    var prototypalQueue = [];
+    for (var i = 0; i < limit; i++) {
+      prototypalQueue.push(PrototypalQueue());
+    }
+    var pseudoclassicalQueue = [];
+    for (var i = 0; i < limit; i++) {
+      pseudoclassicalQueue.push(new PseudoclassicalQueue());
+    }
+    </script>
+  </body>
+</html>
